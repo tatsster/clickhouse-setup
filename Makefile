@@ -5,11 +5,11 @@ run-single-client:
 	docker run -it --rm --link clickhouse-server:clickhouse-server yandex/clickhouse-client  --host clickhouse-server
 
 run-cluster-client-1:
-	docker run -it --rm --network="clickhouse-net" --link clickhouse-01:clickhouse-server yandex/clickhouse-client --host clickhouse-server
+	docker run -it --rm --network="clickhouse-net" --link clickhouse-01:clickhouse-server clickhouse/clickhouse-client --host clickhouse-server
 run-cluster-client-2:
-	docker run -it --rm --network="clickhouse-net" --link clickhouse-02:clickhouse-server yandex/clickhouse-client --host clickhouse-server
+	docker run -it --rm --network="clickhouse-net" --link clickhouse-02:clickhouse-server clickhouse/clickhouse-client --host clickhouse-server
 run-cluster-client-3:
-	docker run -it --rm --network="clickhouse-net" --link clickhouse-03:clickhouse-server yandex/clickhouse-client --host clickhouse-server
+	docker run -it --rm --network="clickhouse-net" --link clickhouse-03:clickhouse-server clickhouse/clickhouse-client --host clickhouse-server
 run-cluster-client-4:
 	docker run -it --rm --network="clickhouse-net" --link clickhouse-04:clickhouse-server yandex/clickhouse-client --host clickhouse-server
 run-cluster-client-5:

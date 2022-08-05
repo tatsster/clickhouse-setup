@@ -25,9 +25,13 @@ Now you can see if it success setup or not.
 
 This part we will setup
 
-- 1 cluster, with 3 shards
+- With 3 shards
 - Each shard has 2 replica server
 - Use ReplicatedMergeTree & Distributed table to setup our table.
+
+This will result:
+- Data in the same shard will be the same
+- 1 data record can exist in 2 database
 
 
 ### Cluster
